@@ -9,3 +9,6 @@ __pycache__/
 .dvc/tmp/
 /confusion_matrix.png
 /metrics.json
+
+data/
+models/
