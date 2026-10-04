@@ -16,8 +16,8 @@ def main():
     x_test = np.load("data/raw/x_test.npy")
     y_test = np.load("data/raw/y_test.npy")
 
-    x_train = x_train.astype("float32") / 255.0
-    x_test = x_test.astype("float32") / 255.0
+    x_train = (x_train.astype("float32") - 127.5) / 127.5
+    x_test = (x_test.astype("float32") - 127.5) / 127.5
 
     x_train, x_val, y_train, y_val = train_test_split(
         x_train,
